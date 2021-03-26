@@ -1076,6 +1076,12 @@
 #date:hover{
 	display: block;
 }
+.order__total-sale{
+	display: none;
+}
+.order__form-submit{
+	border: none;
+}
 @media (max-width: 1024px) {
 	.lk__item-4{
 		justify-content: center;

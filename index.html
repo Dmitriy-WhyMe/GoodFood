@@ -305,7 +305,7 @@
 							<div class="type__item-value">~ 1800 Ккал</div>
 							<div class="type__item-cost">от 1400 руб. за прием</div>
 						</a>
-						<a class="type__item" data-type="Balance" data-calory="~ 1700 Ккал" data-cost="950" id="#type5" value="Click" onmousedown="viewDiv5()">
+						<a class="type__item" data-type="Balance" data-calory="~ 2200 Ккал" data-cost="1600" id="#type5" value="Click" onmousedown="viewDiv5()">
 							<div class="type__item-name">Strong</div>
 							<div class="type__item-line"><span style="width: 185px;"></span></div>
 							<div class="type__item-value">~ 2200 Ккал</div>
@@ -1688,8 +1688,8 @@
 							</label>
 						</div>
 						<div class="order__total">
-							<div class="order__total-text">Итого: <span id="allcost">6 400</span> руб.</div>
-							<div class="order__total-sale">Скидка <span id="sales">150</span> руб.!</div>
+							<div class="order__total-text">Итого: <span id="allcost">6400</span> руб.</div>
+							<div class="order__total-sale">Скидка <span id="sales">0</span> руб.!</div>
 						</div>
 						<button class="btn" id="date-mail" value="Click" onmousedown="viewDiv6()">Дата доставки</button>
 						<input type="text" id="datepicker" name="date" value="Выберите дату">
@@ -1702,14 +1702,14 @@
 									<div class="order__form-text">
 										Имя:
 									</div>
-									<input type="text" name="name" class="input-name">
+									<input type="text" name="name" class="input-name" required>
 									<img src="images/dist/icons/pencil-hand-drawn-tool-outline.png" class="order__form-img">
 								</div>
 								<div class="row">
 									<div class="order__form-text">
 										Телефон:
 									</div>
-									<input type="tel" name="tel" class="input-tell" id="phones">
+									<input type="tel" name="tel" class="input-tell" id="phones" required>
 									<img src="images/dist/icons/pencil-hand-drawn-tool-outline.png" class="order__form-img">
 								</div>
 							</div>
@@ -1717,7 +1717,7 @@
 								<div class="order__form-text">
 										Адресс:
 								</div>
-								<input type="text" name="adres" class="input-adress">
+								<input type="text" name="adres" class="input-adress" required>
 								<img src="images/dist/icons/pencil-hand-drawn-tool-outline.png" class="order__form-img">
 							</div>
 						</div>
@@ -2078,7 +2078,6 @@
 		jQuery(function($) {
 		  $('.program__item').click(function() {
 		    const el = $(this);
-		    console.log(el.data("program"));
 		    var program = el.data("program");
 		    document.getElementById('program_hiden').value = program;
 		  });
@@ -2094,7 +2093,6 @@
 		jQuery(function($) {
 		  $('.order').click(function() {
 		  	var date_hiden = document.querySelector("input[name='date']").value;
-		  	console.log(document.querySelector("input[name='date']").value);
 		  	document.getElementById('date_hiden').value = date_hiden;
 		  });
 		});
@@ -2112,7 +2110,6 @@
 		    $('.program').click(function() {
 				var maxi_item_1 = document.getElementById('days_hiden').value;
 				var maxi_item_3 = document.querySelector('#sales').textContent;
-				console.log(maxi_item_3);
 				var maxi_item_2 = (maxi_item_1 * costs) - maxi_item_3;
 				document.getElementById("allcost").innerHTML =  maxi_item_2;
 		    	document.getElementById('price_hiden').value = maxi_item_2;
